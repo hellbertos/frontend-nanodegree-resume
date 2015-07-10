@@ -91,29 +91,29 @@ var work = {
             "employer" : "Mineral Media Labz",
             "title" : "Web Designer and Developer",
             "location" : "San Francisco, CA",
-            "dates" : "Jan 2012 = present",
-            "description" : "Lorem ipsum dolor polar molar snellit quinnum."
+            "dates" : "Jan 2012 - Present",
+            "description" : "Cupcake ipsum dolor sit amet fruitcake bonbon apple pie I love. Dessert cake I love lemon drops cookie gummi bears jelly-o chocolate I love. I love tiramisu bonbon gummies gingerbread dragée marshmallow. Powder muffin gummi bears oat cake. Danish sugar plum caramels caramels topping jelly. Marzipan tiramisu macaroon gummies marzipan I love pudding"
         },
         {
             "employer" : "Circle Dog Media",
             "title" : "Web Designer/Developer",
             "location" : "San Francisco, CA",
             "dates" : "2010 - 2012",
-            "description" : "Lorem ipsum dolor polar molar snellit quinnum."
+            "description" : "Cupcake ipsum dolor sit amet muffin. I love I love ice cream. Marzipan ice cream oat cake halvah icing tart biscuit halvah pudding. Dessert cake jelly beans sweet roll candy canes cake chupa chups chupa chups icing. Chocolate bar I love jelly beans ice cream. Icing tiramisu muffin lollipop ice cream. Jujubes halvah marshmallow chocolate cookie bonbon liquorice cake."
         },
         {
             "employer" : "Brayton Hughes Design",
             "title" : "Server Administrator/LAN Analyst",
             "location" : "San Francisco CA",
             "dates" : "2005 - 2008",
-            "description" : "Lorem ipsum dolor polar molar snellit quinnum."
+            "description" : "Flagfish Black scabbardfish sarcastic fringehead barred danio. Cutthroat trout cutlassfish anchovy Gila trout, Manta Ray cavefish cusk-eel? Basslet glowlight danio cookie-cutter shark skipjack tuna Blind shark river stingray pompano Peter's elephantnose fish yellowfin pike, sandburrower gar. Atlantic herring vendace neon tetra ballan wrasse elasmobranch armored searobin creek chub Lost River sucker, barb swallower? Paperbone fangtooth tilefish kahawai tompot blenny opaleye spiderfish snakehead!"
         },
         {
             "employer" : "Pear Transmedia",
             "title" : "Web Designer/Developer",
             "location" : "Oakland, CA",
             "dates" : "2003 - 2005",
-            "description" : "Lorem ipsum dolor polar molar snellit quinnum."
+            "description" : "Pacific salmon river loach queen parrotfish codling, opaleye menhaden bandfish golden trout, Black triggerfish angelfish shovelnose sturgeon shovelnose sturgeon. Rock bass antenna codlet atka mackerel--New Zealand sand diver, pink salmon olive flounder milkfish discus. Gulper livebearer koi atka mackerel daggertooth pike conger, bristlenose catfish pencilfish rockfish, eeltail catfish."
         }
     ],
     "display" : function() {
@@ -197,7 +197,7 @@ var education = {
                         // Location
                         var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[instruction].location);
                         $('.education-entry:last').append(formattedLocation);
-                       
+
                         // Majors
                         var formattedMajor = HTMLschoolMajor.replace("%data%",education.schools[instruction].majors);
                         $('.education-entry:last').append(formattedMajor);
