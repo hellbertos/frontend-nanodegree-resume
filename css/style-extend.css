@@ -60,3 +60,31 @@ hr {
     line-height: 24px;
     font-family: Raleway;
 }
+
+/* Work Experience */
+.gray {
+	background-color: #dadada;
+}
+
+a {
+	font-size: 20px;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	color: #999;
+}
+
+.dark-grey-hr {
+	color: #53666f;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(134, 252, 198, 0), rgba(86, 86, 86, 1), rgba(134, 252, 198, 0));
+}
+
+.date-text, .location-text {
+	font-family: Michroma;
+    font-size: 14px;
+	color: #107456;
+}
