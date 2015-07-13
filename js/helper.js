@@ -40,7 +40,7 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<div class="imgContainer"><a href="#" data-featherlight="%dataLb%"><img src="%data%"></a><div class="projectCTA"><span>Click to View Larger Image</span></div></div>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -102,7 +102,23 @@ $(document).click(function(loc) {
 
 });
 
+/*
+Use Jquery to layout anchor tags used with the lightbox plugin
+  and show/hide "click" message
+*/
 
+$(document).ready(function() {
+  var imgContainer = $('.imgContainer');
+
+  // display and hide hidden div with click message
+  imgContainer.hover(
+    function() {
+      $(this).find('.projectCTA').slideDown(200);
+    }, function() {
+      $(this).find('.projectCTA').slideUp(200);
+    });
+
+});
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
