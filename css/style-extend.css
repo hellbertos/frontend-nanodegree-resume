@@ -2,6 +2,10 @@
 Extend styles for customization
 */
 
+#workExperience, #projects, #education {
+	padding-bottom: 20px;
+}
+
 /* Header */
 #header {
 	border-bottom: 2px solid #1a7490;
@@ -73,7 +77,7 @@ a {
 h2 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
-	color: #999;
+	color: #808080;
 }
 
 .dark-grey-hr {
@@ -87,4 +91,11 @@ h2 {
 	font-family: Michroma;
     font-size: 14px;
 	color: #107456;
+}
+
+/*  Projects */
+.project-entry img {
+	border: 1px #777 solid;
+	margin: 10px;
+	padding: 0;
 }
