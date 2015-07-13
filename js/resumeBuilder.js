@@ -35,7 +35,8 @@ var bio = {
         "CSS",
         "JS",
         "Photoshop",
-        "Illustrator"
+        "Illustrator",
+        "Wordpress"
     ],
     "display" : function() {
         // Append values from the BIO object to the page
