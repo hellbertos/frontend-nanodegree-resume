@@ -5,6 +5,17 @@ Extend styles for customization
 #workExperience, #projects, #education {
 	padding-bottom: 20px;
 }
+p {
+	color: #595959;
+}
+
+.emphasis {
+	font-style: italic;
+}
+
+.dark-grey-txt {
+	color: #5c5c5c;
+}
 
 /* Header */
 #header {
@@ -98,4 +109,13 @@ h2 {
 	border: 1px #777 solid;
 	margin: 10px;
 	padding: 0;
+}
+
+/* Education */
+.education-entry h3 {
+	padding-left: 0;
+    padding-bottom: 0;
+    font-family: Raleway;
+    color: #808080;
+    margin-top: 15px;
 }
