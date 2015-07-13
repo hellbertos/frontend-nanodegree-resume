@@ -17,6 +17,10 @@ p {
 	color: #5c5c5c;
 }
 
+.shadow-text {
+	  text-shadow: 2px 2px 3px rgba(0,0,0,.7);
+}
+
 /* Header */
 #header {
 	border-bottom: 2px solid #1a7490;
@@ -57,7 +61,7 @@ hr {
 }
 
 .white-text {
-	font-weight: 100;
+	font-weight: 500;
   	color: #FFFFFF;
  	font-family: Roboto;
 }
@@ -67,6 +71,9 @@ hr {
   	font-family: Michroma;
  	font-size: 18px;
  	font-weight: 300;
+}
+#skills li {
+	font-size: 18px;
 }
 
 .welcome-message {
