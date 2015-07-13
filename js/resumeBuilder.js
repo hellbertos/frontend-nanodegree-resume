@@ -2,22 +2,7 @@
 	James Ruggieri
 */
 
-// Replacement Variables and corresponding Jquery to insert them
-
-/* OLD Singular Vars
-
-var name = "James Ruggieri";
-var formattedName = HTMLheaderName.replace("%data%", name);
-$('#header').prepend(formattedName);
-
-var role = "Web Developer";
-var formattedRole = HTMLheaderRole. replace("%data%", role);
-$('#header').append(formattedRole).css("color","#638192");
-
-*/
-
 // Bio
-
 var bio = {
     "name" : "James Ruggieri",
     "role" : "Web Developer",
@@ -49,19 +34,19 @@ var bio = {
 
                 // Contacts
                 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-                $('#topContacts').append(formattedMobile);
+                $('#topContacts, #footerContacts').append(formattedMobile);
 
                 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-                $("#topContacts").append(formattedEmail);
+                $("#topContacts, #footerContacts").append(formattedEmail);
 
                 var formattedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
-                $("#topContacts").append(formattedTwitter);
+                $("#topContacts, #footerContacts").append(formattedTwitter);
 
                 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-                $("#topContacts").append(formattedGithub);
+                $("#topContacts, #footerContacts").append(formattedGithub);
 
                 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-                $("#topContacts").append(formattedLocation);
+                $("#topContacts, #footerContacts").append(formattedLocation);
 
                 // Pic
                 var formattedPic = HTMLbioPic.replace("%data%",bio.bioPic);
@@ -77,13 +62,11 @@ var bio = {
                     for(var i = 0; i <= bio.skills.length - 1; i++) {
                         var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
                         $('#skills').append(formattedSkills);
-
                         }
 
                     }
                 }
             }
-
 
 // Work Object
 var work = {
@@ -92,7 +75,7 @@ var work = {
             "employer" : "Mineral Media Labz",
             "title" : "Web Designer and Developer",
             "location" : "San Francisco, CA",
-            "dates" : "Jan 2012 - Present",
+            "dates" : "2013 - Present",
             "description" : "Cupcake ipsum dolor sit amet fruitcake bonbon apple pie I love. Dessert cake I love lemon drops cookie gummi bears jelly-o chocolate I love. I love tiramisu bonbon gummies gingerbread dragée marshmallow. Powder muffin gummi bears oat cake. Danish sugar plum caramels caramels topping jelly. Marzipan tiramisu macaroon gummies marzipan I love pudding"
         },
         {
@@ -140,9 +123,7 @@ var work = {
 
     }
 
-
 // Education Object
-
 var education = {
     "schools" :
         [
@@ -152,7 +133,7 @@ var education = {
                 "degree" : "Bachelor of Science",
                 "majors" : ["Environmental Studies"],
                 "dates" : 1993,
-                "url": null
+                "url": "http://www.ucsb.edu/"
             },
             {
                 "name" : "UC Berkeley Extention",
@@ -160,7 +141,7 @@ var education = {
                 "degree" : "Singular Night Classes",
                 "majors" : ["Extended Learning in CompSci"],
                 "dates" : 1999,
-                "url": null
+                "url": "http://extension.berkeley.edu/"
             },
             {
                 "name" : "Cabrillo College",
@@ -168,7 +149,7 @@ var education = {
                 "degree" : "General Education",
                 "majors" : ["General Education"],
                 "dates" : 1989,
-                "url" : null
+                "url" : "http://www.cabrillo.edu/"
             }
         ],
     "onlineCourses" :
@@ -186,7 +167,7 @@ var education = {
                     for (instruction in education.schools) {
                         $('#education').append(HTMLschoolStart);
                         // School Name and Degree
-                        var formattedTitle = HTMLschoolName.replace("%data%", education.schools[instruction].name);
+                        var formattedTitle = HTMLschoolName.replace("%data%", education.schools[instruction].name).replace("#", education.schools[instruction].url);
                         var formattedDegree = HTMLschoolDegree.replace("%data%",education.schools[instruction].degree);
                         $('.education-entry:last').append(formattedTitle+' '+formattedDegree);
                         // Date
@@ -223,26 +204,28 @@ var education = {
 }
 
 // Projects Object
-
 var projects = {
     "project" : [
         {
             "title" : "caiakoopman.com",
             "dates" : "2013 - present",
             "description" : "And when thou art so gone before&mdash;if that ever befall&mdash;then ere I can follow, thou must still appear to me, to pilot me still?&mdash;Was it not so? Well, then, did I believe all ye say, oh my pilot! I have here two pledges that I shall yet slay Moby Dick and survive it. Take another pledge, old man, said the Parsee, as his eyes lighted up like fire-flies in the gloom&mdash;Hemp only can kill thee. The gallows, ye mean.&mdash;I am immortal then, on land and on sea, cried Ahab, with a laugh of derision;&mdash;Immortal on land and on sea!",
-            "images" : ["images/caia-home.jpg", "images/caia-portfolio.jpg", "images/caia-contact.jpg"]
+            "images" : ["images/caia-home.jpg", "images/caia-portfolio.jpg", "images/caia-contact.jpg"],
+            "imagesLb" : ["images/caia-home-lb.jpg", "images/caia-portfolio-lb.jpg", "images/caia-contact-lb.jpg"]
         },
         {
             "title" : "crescentmoonskincare.com",
             "dates" : "2013",
             "description" : "Oh no way! Not many, if any, this beached as hongi is as naff as a tapu seabed. Mean while, in West Auckland, Lomu and Maui were up to no good with a bunch of cool wifebeater singlets. The chocka full force of his packing a sad was on par with Jim Hickey's sweet pohutukawa. Put the jug on will you bro, all these pretty suss cheese on toasts can wait till later. The first prize for chundering goes to... John Key and his beaut lamington, what a sad guy. Bro, boxes of fluffies are really wicked good with random Hei-tikis, aye. You have no idea how sweet as our epic bottles of tomato sauce were aye.",
-            "images" : ["images/cm-home.jpg", "images/cm-srvs.jpg", "images/cm-contact.jpg"]
+            "images" : ["images/cm-home.jpg", "images/cm-srvs.jpg", "images/cm-contact.jpg"],
+            "imagesLb" : ["images/cm-home-lb.jpg", "images/cm-srvs-lb.jpg", "images/cm-contact-lb.jpg"]
         },
         {
             "title" : "touchwellness.com",
             "dates" : "2015",
             "description" : "Put the jug on will you bro, all these dodgy rugby balls can wait till later. The first prize for reffing the game goes to... James Cook and his tip-top L&P, what a stink buzz. Bro, gumboots are really sweet as good with primo pavlovas, aye. I'm not here to frack spiders, good afterble constanoon. You have no idea how nuclear-free our choice twink sticks were aye.",
-            "images" : ["images/tw-home.jpg", "images/tw-ctnt.jpg", "images/tw-contact.jpg"]
+            "images" : ["images/tw-home.jpg", "images/tw-ctnt.jpg", "images/tw-contact.jpg"],
+            "imagesLb" : ["images/tw-home-lb.jpg", "images/tw-ctnt-lb.jpg", "images/tw-contact-lb.jpg"]
         }
     ],
      "display" : function() {
@@ -262,7 +245,7 @@ var projects = {
                         // Iterate through images Array
                         if(projects.project[site].images.length > 0) {
                             for(pic in projects.project[site].images) {
-                                var formattedImage = HTMLprojectImage.replace("%data%", projects.project[site].images[pic]);
+                                var formattedImage = HTMLprojectImage.replace("%data%", projects.project[site].images[pic]).replace("%dataLb%", projects.project[site].imagesLb[pic]);
                                 $('.project-entry:last').append(formattedImage);
                             }
 
@@ -272,55 +255,15 @@ var projects = {
 
                 }
 }
-// Call the 'display' methods on the various sections
-/*
-bio.display();
-work.display();
-projects.display();
-education.display();
-*/
 
+// Call the 'display' methods on the various sections out of order
 education.display();
 work.display();
 projects.display();
 bio.display();
+
 // Internationalize
-
-$('#main').prepend(internationalizeButton);
+$('#main').append(internationalizeButton);
 
 // Map
-
 $('#mapDiv').append(googleMap);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
