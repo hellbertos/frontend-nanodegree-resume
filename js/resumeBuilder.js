@@ -148,7 +148,7 @@ var education = {
             {
                 "name": "UCSB",
                 "location": "Santa Barbara, CA",
-                "degree" : "BS",
+                "degree" : "Bachelor of Science",
                 "majors" : ["Environmental Studies"],
                 "dates" : 1993,
                 "url": null
@@ -156,7 +156,7 @@ var education = {
             {
                 "name" : "UC Berkeley Extention",
                 "location" : "UCB Ext. San Francisco Campus",
-                "degree" : "Not Offered",
+                "degree" : "Singular Night Classes",
                 "majors" : ["Extended Learning in CompSci"],
                 "dates" : 1999,
                 "url": null
@@ -164,7 +164,7 @@ var education = {
             {
                 "name" : "Cabrillo College",
                 "location" : "Santa Cruz, CA",
-                "degree" : "NA",
+                "degree" : "General Education",
                 "majors" : ["General Education"],
                 "dates" : 1989,
                 "url" : null
@@ -173,7 +173,7 @@ var education = {
     "onlineCourses" :
         [
             {
-                "title" : "Front End Developer - Nano Degree",
+                "title" : "Front End Developer Nano Degree",
                 "school" : "Udacity",
                 "date" : 2015,
                 "url" : "http://udacity.com",
@@ -184,13 +184,11 @@ var education = {
                     var instruction;
                     for (instruction in education.schools) {
                         $('#education').append(HTMLschoolStart);
-
+                        // School Name and Degree
                         var formattedTitle = HTMLschoolName.replace("%data%", education.schools[instruction].name);
-                        $('.education-entry:last').append(formattedTitle);
-                         // Degree
                         var formattedDegree = HTMLschoolDegree.replace("%data%",education.schools[instruction].degree);
-                        $('.education-entry:last').append(formattedDegree);
-
+                        $('.education-entry:last').append(formattedTitle+' '+formattedDegree);
+                        // Date
                         var formattedDates = HTMLschoolDates.replace("%data%", education.schools[instruction].dates);
                         $('.education-entry:last').append(formattedDates);
 
@@ -209,10 +207,8 @@ var education = {
                         $('.education-entry:last').append(HTMLonlineClasses);
 
                         var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[webClass].title).replace("#",education.onlineCourses[webClass].courseUrl);
-                        $('.education-entry:last').append(formattedTitle);
-
                         var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[webClass].school);
-                        $('.education-entry:last').append(formattedSchool);
+                        $('.education-entry:last').append(formattedTitle+' '+formattedSchool);
 
                         var formattedDate = HTMLonlineDates.replace("%data%",education.onlineCourses[webClass].date);
                         $('.education-entry:last').append(formattedDate);
