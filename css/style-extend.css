@@ -13,7 +13,24 @@ p {
 	font-style: italic;
 }
 
-.dark-grey-txt {
+.seaFoam {
+	background-color: #99cfb6;
+}
+
+.seaFoam-text {
+	color: #99cfb6;
+  	font-family: Michroma;
+  	font-weight: 300;
+  	font-size: 14px;
+}
+
+.white-text {
+	font-weight: 500;
+  	color: #FFFFFF;
+ 	font-family: Roboto;
+}
+
+.dark-grey-text {
 	color: #5c5c5c;
 }
 
@@ -51,19 +68,6 @@ hr {
      background-color: #080808;
      margin: 0 10px 0 0;
      border: 1px solid #B3B3B3
-}
-
-.seaFoam-text {
-	color: #99CFB6;
-  	font-family: Michroma;
-  	font-weight: 300;
-  	font-size: 14px;
-}
-
-.white-text {
-	font-weight: 500;
-  	color: #FFFFFF;
- 	font-family: Roboto;
 }
 
 #skillsH3 {
@@ -118,6 +122,28 @@ h2 {
 	padding: 0;
 }
 
+.projectCTA {
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+	position: absolute;
+	left: 10px;
+	top: 20px;
+	width: 280px;
+	color: #bfffe1;
+	height: 30px;
+	text-align: center;
+	padding-top: 10px;
+	display: none;
+}
+
+.imgContainer {
+	display: inline-flex;
+	width: 300px;
+	position: relative;
+}
+.projectCTA a img {
+	z-index: 1;
+}
 /* Education */
 .education-entry h3 {
 	padding-left: 0;
