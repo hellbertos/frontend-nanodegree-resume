@@ -58,50 +58,6 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-
-/*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
-$(document).ready(function() {
-  $('button').click(function() {
-    var iName = bio.name;
-
-    var inName = function(iName) {
-        var newName = iName.toLowerCase();
-        var splitName = newName.split(" ");
-        splitName[1] = splitName[1].toUpperCase();
-        splitName[0] = splitName[0].slice(0,1).toUpperCase()+splitName[0].slice(1);
-        iName = splitName.join(" ");
-        return iName;
-    };
-    $('#name').html(inName(iName));
-  });
-});
-
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
-clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  // your code goes here!
-  var xVal, yVal;
-   xVal = loc.pageX;
-   yVal = loc.pageY;
-  logClicks(xVal, yVal);
-
-});
-
 /*
 Use Jquery to layout anchor tags used with the lightbox plugin
   and show/hide "click" message
