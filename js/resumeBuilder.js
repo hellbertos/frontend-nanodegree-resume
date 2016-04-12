@@ -1,4 +1,4 @@
-/* Udacity Javascript/Jquery Section
+/* Udacity Inspired Github Resume
 	James Ruggieri
 */
 
