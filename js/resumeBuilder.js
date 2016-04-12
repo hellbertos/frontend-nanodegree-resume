@@ -31,22 +31,13 @@ var bio = {
 
                 var formattedName = HTMLheaderName.replace("%data%", bio.name);
                 $("#header").prepend(formattedName);
-
-                // Contacts
-                var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-                $('#topContacts, #footerContacts').append(formattedMobile);
-
-                var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-                $("#topContacts, #footerContacts").append(formattedEmail);
-
-                var formattedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
-                $("#topContacts, #footerContacts").append(formattedTwitter);
-
-                var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-                $("#topContacts, #footerContacts").append(formattedGithub);
-
-                var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-                $("#topContacts, #footerContacts").append(formattedLocation);
+				
+				// Loop through contacts and add them
+				for (contact in bio.contacts){
+					var formattedString = HTMLcontact.replace( '%contact%', contact ).replace( '%data%', bio.contacts[contact] );
+					$( '#topContacts, #footerContacts' ).append(formattedString);
+				}
+				
 
                 // Pic
                 var formattedPic = HTMLbioPic.replace("%data%",bio.bioPic);
