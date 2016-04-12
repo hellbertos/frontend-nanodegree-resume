@@ -1,17 +1,8 @@
 /*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
+  Set up basic strings of HTML to construct resume from using data later
 */
 
 
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="sub-h1">%data%</span><hr/>';
 
@@ -78,29 +69,6 @@ $(document).ready(function() {
   });
 });
 
-/*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
-clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  // your code goes here!
-  var xVal, yVal;
-   xVal = loc.pageX;
-   yVal = loc.pageY;
-  logClicks(xVal, yVal);
-
-});
 
 /*
 Use Jquery to layout anchor tags used with the lightbox plugin
@@ -121,8 +89,8 @@ $(document).ready(function() {
 });
 
 /*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
+Generate a custom Google Map for the website.
+
 https://developers.google.com/maps/documentation/javascript/reference
 */
 var map;    // declares a global map variable
